@@ -48,8 +48,8 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.flywaydb</groupId>
-			<artifactId>flyway-core</artifactId>
+    		<groupId>org.flywaydb</groupId>
+    		<artifactId>flyway-mysql</artifactId>
 		</dependency>
 	</dependencies>
 
