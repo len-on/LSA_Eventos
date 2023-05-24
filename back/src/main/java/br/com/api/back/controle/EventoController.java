@@ -5,19 +5,18 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.api.back.modelo.UsuarioModelo;
-import br.com.api.back.servico.UsuarioServico;
+import br.com.api.back.modelo.EventoModelo;
+import br.com.api.back.servico.EventoServico;
 
 @RestController
-@CrossOrigin(origins="*")
-public class UsuarioController {
+@CrossOrigin(origins = "*")
+public class EventoController {
     
     @Autowired
-    private UsuarioServico usuarioServico;
+    private EventoServico eventoServico;
 
-    @GetMapping("/listarUsuarios")
-    public Iterable<UsuarioModelo> listar(){
-        return usuarioServico.listar();
+    @GetMapping("/listarEventos")
+    public Iterable<EventoModelo> listar(){
+        return eventoServico.listar();
     }
-
 }
