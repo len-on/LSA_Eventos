@@ -13,18 +13,18 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "administrador")
+@Table(name = "participante")
 @Getter
 @Setter
 @EqualsAndHashCode
-public class AdministradorModelo {
-
+public class ParticipanteModelo {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_administrador;
+    private Long id_participante;
+    private String turma_participante;
 
     @OneToOne
     @JoinColumn(name = "usuario_id_usuario")
-    private UsuarioModelo usuarioAdmModelo;
-    
+    private UsuarioModelo usuarioParticUsuarioModelo;
 }
