@@ -13,7 +13,6 @@ public class UsuarioServico {
     @Autowired
     private UsuarioRepository usuarioRepository;
 
-    
     //Metodo para listar todos os usuarios
     public Iterable<UsuarioModelo> listar() {
         return usuarioRepository.findAll();
