@@ -26,5 +26,5 @@ public class ParticipanteModelo {
 
     @OneToOne
     @JoinColumn(name = "usuario_id_usuario")
-    private UsuarioModelo usuarioParticUsuarioModelo;
+    private UsuarioModelo usuarioParticipanteModelo;
 }

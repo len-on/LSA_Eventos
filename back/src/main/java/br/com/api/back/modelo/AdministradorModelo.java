@@ -25,6 +25,6 @@ public class AdministradorModelo {
 
     @OneToOne
     @JoinColumn(name = "usuario_id_usuario")
-    private UsuarioModelo usuarioAdmModelo;
+    private UsuarioModelo usuarioAdministradorModelo;
     
 }
