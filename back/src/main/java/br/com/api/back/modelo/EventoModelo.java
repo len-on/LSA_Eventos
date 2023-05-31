@@ -7,6 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -22,9 +23,17 @@ public class EventoModelo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_evento;
+
+    @NotNull
     private Date data_evento;
+
+    @NotNull
     private Date horario_evento;
+
+    @NotNull
     private String duracao_evento;
+
+    @NotNull
     private String nome_evento;
     
 }

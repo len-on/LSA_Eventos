@@ -1,10 +1,8 @@
-package br.com.api.back.resource;
+package br.com.api.back.recurso;
 
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class AdministradorResource {
-
-    
+public class AdmEventoResource {
     
 }
