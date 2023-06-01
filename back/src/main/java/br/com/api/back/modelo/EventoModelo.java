@@ -28,9 +28,6 @@ public class EventoModelo {
     private Date data_evento;
 
     @NotNull
-    private Date horario_evento;
-
-    @NotNull
     private String duracao_evento;
 
     @NotNull

@@ -22,7 +22,6 @@ public class InscricaoModelo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_inscricao;
-    private Date horario_inscricao;
     private Date data_inscricao;
     private Long num_inscricao;
     
