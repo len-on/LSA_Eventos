@@ -11,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+//import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -47,5 +48,15 @@ public class InscricaoResource {
         return inscricaoModelo.isPresent() ? ResponseEntity.ok(inscricaoModelo) : ResponseEntity.notFound().build();
     }
 
+    // @PutMapping("/{codigo}")
+	// public ResponseEntity<InscricaoModelo> atualizar(@PathVariable Long codigo, @Valid @RequestBody InscricaoModelo inscricaoModelo) {
+	
+	// 	try {
+	// 		InscricaoModelo inscricaoSalva = inscricaoServico.atualizar(codigo, inscricaoModelo);
+	// 		return ResponseEntity.ok(inscricaoSalva);
+	// 	} catch (IllegalArgumentException e) {
+	// 		return ResponseEntity.notFound().build();
+	// 	}
+	// }
     
 }
