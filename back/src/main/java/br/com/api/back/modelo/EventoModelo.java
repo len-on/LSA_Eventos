@@ -2,6 +2,7 @@ package br.com.api.back.modelo;
 
 import java.time.LocalDate;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -27,6 +28,7 @@ public class EventoModelo {
     private Long id_evento;
 
     @NotNull
+    @Column(name = "data_evento")
     private LocalDate data_evento;
 
     @NotNull
