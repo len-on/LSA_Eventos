@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
@@ -28,12 +30,16 @@ public class EventoModelo {
     private Date data_evento;
 
     @NotNull
-    private String descricao;
+    private String descricao_evento;
 
     @NotNull
     private String duracao_evento;
 
     @NotNull
     private String nome_evento;
+
+    @ManyToOne
+    @JoinColumn(name = "administrador_id_adm")
+    private AdministradorModelo administradorModelo;
     
 }

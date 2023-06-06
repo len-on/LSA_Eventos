@@ -21,7 +21,7 @@ public class AdministradorModelo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_administrador;
+    private Long id_adm;
 
     @OneToOne
     @JoinColumn(name = "usuario_id_usuario")

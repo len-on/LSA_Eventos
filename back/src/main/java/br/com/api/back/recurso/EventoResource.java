@@ -30,12 +30,12 @@ public class EventoResource {
     @Autowired
     private ApplicationEventPublisher publisher;
 
-    @GetMapping
+    @GetMapping("/listar")
     public Iterable<EventoModelo> listar() {
         return eventoRepository.findAll();
     }
 
-    @PostMapping
+    @PostMapping("/criar")
     public ResponseEntity<EventoModelo> criar(@Valid @RequestBody EventoModelo eventoModelo, HttpServletResponse response){
         EventoModelo eventoModeloSalva = eventoRepository.save(eventoModelo);
 
@@ -46,6 +46,7 @@ public class EventoResource {
         return ResponseEntity.status(HttpStatus.CREATED).body(eventoModeloSalva);
     }
     
+    @GetMapping("/{codigo}")
     public ResponseEntity<?> buscarPeloCodigo(@PathVariable Long codigo) {
         Optional<EventoModelo> eventoModelo = this.eventoRepository.findById(codigo);
         return eventoModelo.isPresent() ? ResponseEntity.ok(eventoModelo) : ResponseEntity.notFound().build();
