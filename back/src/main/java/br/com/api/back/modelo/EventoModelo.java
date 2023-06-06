@@ -1,6 +1,6 @@
 package br.com.api.back.modelo;
 
-import java.sql.Date;
+import java.time.LocalDate;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -27,7 +27,7 @@ public class EventoModelo {
     private Long id_evento;
 
     @NotNull
-    private Date data_evento;
+    private LocalDate data_evento;
 
     @NotNull
     private String descricao_evento;

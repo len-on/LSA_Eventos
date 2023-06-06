@@ -1,6 +1,6 @@
 package br.com.api.back.modelo;
 
-import java.sql.Date;
+import java.time.LocalDate;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -37,6 +37,6 @@ public class UsuarioModelo {
     private String email_usuario;
 
     @NotNull
-    private Date data_nascimento_usuario;
+    private LocalDate data_nascimento_usuario;
     
 }
