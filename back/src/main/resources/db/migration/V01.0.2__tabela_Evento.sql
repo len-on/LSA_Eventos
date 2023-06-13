@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS `lsa_eventos`.`evento` (
-  `id_evento` INT NOT NULL,
+  `id_evento` INT NOT NULL AUTO_INCREMENT,
   `data_evento` DATETIME NOT NULL,
   `descricao_evento` VARCHAR(255) NOT NULL,
   `duracao_evento` VARCHAR(45) NOT NULL,

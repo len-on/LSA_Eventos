@@ -12,6 +12,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
@@ -27,8 +29,9 @@ public class EventoModelo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_evento;
 
-    @NotNull
     @Column(name = "data_evento")
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    @NotNull
     private LocalDate data_evento;
 
     @NotNull

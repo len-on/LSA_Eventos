@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 
 
@@ -35,6 +36,7 @@ public class UsuarioModelo {
     @NotNull
     private String CPF_usuario;
 
+    @Email
     @NotNull
     private String email_usuario;
 
