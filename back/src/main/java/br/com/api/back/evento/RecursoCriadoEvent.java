@@ -7,14 +7,23 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.context.ApplicationEvent;
 
 import br.com.api.back.recurso.EventoResource;
-import lombok.Getter;
 
 public class RecursoCriadoEvent extends ApplicationEvent {
 
     private static final Long serialVersionUID = 1L;
     
-    @Getter private HttpServletResponse response;
-    @Getter private Long codigo;
+    private HttpServletResponse response;
+    private Long codigo;
+
+    
+
+    public HttpServletResponse getResponse() {
+        return response;
+    }
+
+    public Long getCodigo() {
+        return codigo;
+    }
 
     public RecursoCriadoEvent(Object source, HttpServletResponse response, Long codigo) {
         super(source);

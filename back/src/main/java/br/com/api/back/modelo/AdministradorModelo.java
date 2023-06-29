@@ -8,16 +8,11 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
 
 @Entity
 @Table(name = "administrador")
-@Getter
-@Setter
-@EqualsAndHashCode
 public class AdministradorModelo {
 
     @Id
@@ -26,6 +21,25 @@ public class AdministradorModelo {
 
     @OneToOne
     @JoinColumn(name = "usuario_id_usuario")
+    @JsonProperty("usuarioAdministradorModelo")
     private UsuarioModelo usuarioAdministradorModelo;
+
+    public Long getId_adm() {
+        return id_adm;
+    }
+
+    public void setId_adm(Long id_adm) {
+        this.id_adm = id_adm;
+    }
+
+    public UsuarioModelo getUsuarioAdministradorModelo() {
+        return usuarioAdministradorModelo;
+    }
+
+    public void setUsuarioAdministradorModelo(UsuarioModelo usuarioAdministradorModelo) {
+        this.usuarioAdministradorModelo = usuarioAdministradorModelo;
+    }
+
+    
     
 }
